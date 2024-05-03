@@ -21,15 +21,12 @@ if (xp <= 1000) {
     level = ranking[7]
 }
 
-// while (xp < 10000) {
-//     level = ranking[0]
-// }
 
 console.log("O Herói de nome " + String(name) + " está no nível de " + level + ".");
 
 // - Variáveis OK
 // - Operadores OK
-// - Laços de repetição
+// - Laços de repetição ?
 // - Estruturas de decisões OK
 
 // Se XP for menor do que 1.000 = Ferro
