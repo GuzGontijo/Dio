@@ -1,32 +1,37 @@
 let name = "Jorgito"
-let xp = 5432
-let ranking = ["Ferro", "Bronze", "Prata", "Ouro", "Platina", "Ascendente", "Imortal", "Radiante"]
+let xp = 1200
+let ranking = [
+    [1000, "Ferro"], 
+    [2000, "Bronze"],
+    [5000, "Prata"],
+    [7000, "Ouro"], 
+    [8000, "Platina"],
+    [9000, "Ascendente"],
+    [10000, "Imortal"]
+]
+let rankingTotal = ranking.length
+let index = rankingTotal
+let match = false
 let level
 
-if (xp <= 1000) {
-    level = ranking[0]
-}else if (xp <= 2000) {
-    level = ranking[1]
-}else if (xp <= 5000) {
-    level = ranking[2]
-}else if (xp <= 7000) {
-    level = ranking[3]
-}else if (xp <= 8000) {
-    level = ranking[4]
-}else if (xp <= 9000) {
-    level = ranking[5]
-}else if (xp <= 10000) {
-    level = ranking[6]
-}else {
-    level = ranking[7]
+while (match == false) {
+    let line = rankingTotal-index
+    if (xp <= ranking[line][0]) {
+        level = ranking[line][1]
+        match = true
+    } else if (xp > 10000) {
+        level = "Radiante"
+        match = true
+    }
+    index--
 }
-
 
 console.log("O Herói de nome " + String(name) + " está no nível de " + level + ".");
 
+
 // - Variáveis OK
 // - Operadores OK
-// - Laços de repetição ?
+// - Laços de repetição OK
 // - Estruturas de decisões OK
 
 // Se XP for menor do que 1.000 = Ferro
