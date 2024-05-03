@@ -25,10 +25,7 @@ if (xp <= 1000) {
 //     level = ranking[0]
 // }
 
-
 console.log("O Herói de nome " + String(name) + " está no nível de " + level + ".");
-
-
 
 // - Variáveis OK
 // - Operadores OK
