@@ -1,16 +1,39 @@
-// # 2️⃣ Calculadora de partidas Rankeadas
-// **O Que deve ser utilizado**
+let victories = 560
+let defeats = 5
+let ranking = [
+    [0, "Ferro"],
+    [11, "Bronze"],
+    [21, "Prata"],
+    [51, "Ouro"],
+    [81, "Diamante"],
+    [91, "Lendário"],
+    [101, "Imortal"]
+]
+let winRatio
+let level
 
-// - Variáveis
-// - Operadores
-// - Laços de repetição
-// - Estruturas de decisões
-// - Funções
+function ratioCalculator () {
+    winRatio = victories - defeats
+    checkRank();
+}
 
-// ## Objetivo:
+function checkRank () {
+    for (let index = 0; index < ranking.length; index++) {
+        if (winRatio >= ranking[index][0]) {
+            level = ranking[index][1]
+            };
+    }
+}
 
-// Crie uma função que recebe como parâmetro a quantidade de vitórias e derrotas de um jogador,
-// depois disso retorne o resultado para uma variável, o saldo de Rankeadas deve ser feito através do calculo (vitórias - derrotas)
+ratioCalculator();
+
+console.log("O Herói tem de saldo de " + String(winRatio) + " vitórias e está no nível de " + level + ".")
+
+// - Variáveis OK
+// - Operadores OK
+// - Laços de repetição OK
+// - Estruturas de decisões OK
+// - Funções OK
 
 // Se vitórias for menor do que 10 = Ferro
 // Se vitórias for entre 11 e 20 = Bronze
@@ -19,8 +42,3 @@
 // Se vitórias for entre 81 e 90 = Diamante
 // Se vitórias for entre 91 e 100= Lendário
 // Se vitórias for maior ou igual a 101 = Imortal
-
-// ## Saída
-
-// Ao final deve se exibir uma mensagem:
-// "O Herói tem de saldo de **{saldoVitorias}** está no nível de **{nivel}**"
